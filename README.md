@@ -29,7 +29,8 @@ drive.mount('/content/drive')
 ## Prepare Data
 Upload and unzip your data files. Update the paths accordingly.
 
-```!scp /path/to/your/data.zip /content/
+```python
+!scp /path/to/your/data.zip /content/
 !unzip /content/data.zip -d /content/
 ```
 
@@ -38,7 +39,8 @@ Upload and unzip your data files. Update the paths accordingly.
 ## Clone Repository
 Clone the YOLOv9 repository for model training.
 
-```!git clone https://github.com/computervisioneng/yolov9
+```python
+!git clone https://github.com/computervisioneng/yolov9
 %cd yolov9
 ```
 
@@ -47,7 +49,8 @@ Clone the YOLOv9 repository for model training.
 ## Install Requirements
 Install all dependencies needed to run YOLOv9.
 
-```!pip install -r requirements.txt
+```python
+!pip install -r requirements.txt
 ```
 
 ---
@@ -55,7 +58,8 @@ Install all dependencies needed to run YOLOv9.
 ## Train Model
 Use the Yolov9 class to initiate model training. Replace <path_to_data.yaml> with the actual path to your data.yaml file.
 
-```from yolov9 import Yolov9
+```python
+from yolov9 import Yolov9
 
 model = Yolov9('object-detection')
 model.train(data='/content/path_to_data.yaml', epochs=20)
